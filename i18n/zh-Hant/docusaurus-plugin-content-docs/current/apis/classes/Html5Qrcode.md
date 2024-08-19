@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Class: Html5Qrcode
 
-用於配置基於網頁的 QR 碼和條碼掃描器的低級 API。
+用於配置基於網頁的 QR Code 和條碼掃描器的低級 API。
 
 支援鏡頭掃描和基於檔案的掃描 API。
 
@@ -43,10 +43,11 @@ sidebar_position: 1
 初始化程式碼掃描器。
 #### Parameters
 
-| Name | Type | Description |
+| 名稱 | 類型 | 描述 |
 | :------ | :------ | :------ |
-| elementId | string | Id of the HTML element. |
-| configOrVerbosityFlag? | boolean \| [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) | optional, config object of type [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) or a boolean verbosity flag (to maintain backward compatibility). If nothing is passed, default values would be used. If a boolean value is used, it'll be used to set verbosity. Pass a config value to configure the Html5Qrcode scanner as per needs. Use of configOrVerbosityFlag as a boolean value is being deprecated since version 2.0.7. TODO(mebjas): Deprecate the verbosity boolean flag completely. |
+| elementId | string | HTML 元素的 ID。 |
+| configOrVerbosityFlag? | boolean \| [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) | 可選，`Html5QrcodeFullConfig` 類型的配置對象或布林值的詳細程度標誌（以維持向後兼容性）。如果未傳遞任何值，將使用預設值。如果使用布林值，它將用於設定詳細程度。傳遞配置值以根據需要配置 Html5Qrcode 掃描器。自版本 2.0.7 起，`configOrVerbosityFlag` 作為布林值的用法已被棄用。TODO(mebjas): 完全棄用詳細程度布林標誌。 |
+
 #### 參數
 
 | 名稱 | 類型 | 描述 |
@@ -123,14 +124,14 @@ TODO(minhazav): Document this API, currently hidden.
 TODO(minhazav): 文檔化此 API，目前為隱藏。
 **`Throws`**
 
-如果掃描不在運行狀態，則拋出錯誤。
+如果掃描不在執行狀態，則拋出錯誤。
 
 #### 回傳
 
 [`CameraCapabilities`](../interfaces/CameraCapabilities.md)
 
 capabilities of the running camera.
-運行中相機的能力
+執行中相機的能力
 #### Defined in
 
 [html5-qrcode.ts:811](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L811)
