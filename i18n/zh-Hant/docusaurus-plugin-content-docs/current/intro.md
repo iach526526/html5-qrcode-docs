@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 入門指南
 
-在不到 5 分鐘內探索 **html5-qrcode**。
+在 5 分鐘內開始 **html5-qrcode**。
 
 ## 設定必要函式庫
 如果你使用 `npm`，便可以直接開始使用。如果你的專案中沒有使用 `npm`，請參閱下一節。
@@ -184,9 +184,10 @@ html5QrCode.stop().then((ignore) => {
 <div id="reader" width="600px" height="600px"></div>
 <script src="./dist/html5-qrcode.js"></script>
 ```
-> It's not mandatory to set the height and width of the HTML element. If provided, the library would try to honor it. If it's not set, the library would set a default width and derive the height based on the input image's aspect ratio.
+> 設定 HTML 元素的高度和寬度不是強制性的。如果提供了這些屬性，函式庫會盡量遵守。若未設定，將設定預設寬度，並根據輸入圖像的長寬比推算高度。
 
-Add an `Input` element for supporting file selection like this:
+添加一個 `Input` 元素來支援檔案選擇，如下所示：
+
 ```html
 <input type="file" id="qr-input-file" accept="image/*">
 <!-- 
@@ -195,9 +196,9 @@ Add an `Input` element for supporting file selection like this:
 
 <input type="file" id="qr-input-file" accept="image/*" capture>
 ```
-Find more information about this at [developers.google.com](https://developers.google.com/web/fundamentals/media/capturing-images).
+更多資訊可以參見 [developers.google.com](https://developers.google.com/web/fundamentals/media/capturing-images)。
 
-And in JavaScript code initialize the object and attach listener like this:
+在 JavaScript 代碼中，初始化對象並附加監聽器，如下所示：
 ```js
 const html5QrCode = new Html5Qrcode(/* element id */ "reader");
 // File based scanning
@@ -228,34 +229,31 @@ fileinput.addEventListener('change', e => {
 // Eventually, this beta API will be migrated to the public API.
 ```
 
-> Note that inline scanning and file-based scanning are mutually exclusive at the moment. This means you can only use one of them at a time. I'll soon be adding support for the option to have both if the requirement comes in. If you want to use both, use `html5QrCode#clear()` method to clear the canvas.
+> 請注意，目前內嵌掃描和基於檔案的掃描是互斥的。這意味著你一次只能使用其中之一。如果有需求，我們將很快添加支援同時使用兩者的功能。如果你想同時使用兩者，請使用 `html5QrCode#clear()` 方法來清除畫布。
 
-
-## Demo
+## 示範
 <img src="https://scanapp.org/assets/github_assets/qr-code.png" width="200px" /><br />
 
-_Scan this image or visit [blog.minhazav.dev/research/html5-qrcode.html](https://blog.minhazav.dev/research/html5-qrcode.html)_
+_掃描這張圖片或訪問 [blog.minhazav.dev/research/html5-qrcode.html](https://blog.minhazav.dev/research/html5-qrcode.html)_
 
-## For more information
+## 更多資訊
 
-### If you are on Medium
+### 如果你在 Medium 上
 [![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://bit.ly/3CZiASv)
 
-[Thorough documentation on Html5-qrcode library on Medium](https://bit.ly/3CZiASv).
+[Medium 上關於 Html5-qrcode 庫的詳細文檔](https://bit.ly/3CZiASv)。
 
-### Otherwise
+### 否則
 
-Check these articles on how to use this library:
+查看這些文章了解如何使用該庫：
 <!-- TODO(mebjas) Mirgate this link to blog.minhazav.dev -->
--   [QR and barcode scanner using HTML and JavaScript](https://minhazav.medium.com/qr-and-barcode-scanner-using-html-and-javascript-2cdc937f793d)
--   [HTML5 QR Code scanning — launched v1.0.1 without jQuery dependency and refactored Promise based APIs](https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/).
--   [HTML5 QR Code scanning with JavaScript — Support for scanning the local file and using default camera added (v1.0.5)](https://blog.minhazav.dev/HTML5-QR-Code-scanning-support-for-local-file-and-default-camera/)
+-   [使用 HTML 和 JavaScript 的 QR 和條碼掃描器](https://minhazav.medium.com/qr-and-barcode-scanner-using-html-and-javascript-2cdc937f793d)
+-   [HTML5 QR 碼掃描 — 發布了 v1.0.1，不使用 jQuery，並重構了基於 Promise 的 API](https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/)
+-   [HTML5 QR 碼掃描與 JavaScript — 添加了對掃描本地檔案和使用預設相機的支援（v1.0.5）](https://blog.minhazav.dev/HTML5-QR-Code-scanning-support-for-local-file-and-default-camera/)
 
-## Screenshots
+## 截圖
 ![screenshot](https://scanapp.org/assets/github_assets/screen.gif)<br />
-_Figure: Screenshot from Google Chrome running on MacBook Pro_
+_圖示：MacBook Pro 上執行的 Google Chrome 截圖_
 
-## Documentation
-Checkout [API documentation](category/apis) for more information on individual components.
-
-
+## 文檔
+查看 [API 文檔](category/apis) 以獲取有關各個套件的更多資訊。
