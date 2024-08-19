@@ -1,33 +1,31 @@
----
+﻿---
 sidebar_position: 1
 ---
 
-# Getting started
+# 入門指南
 
-Let's discover **html5-qrcode in less than 5 minutes**.
+在不到 5 分鐘內探索 **html5-qrcode**。
 
-## Setup the library
-You can get started using `npm`, if you don't use `npm` in your project checkout the next section.
+## 設定必要函式庫
+如果你使用 `npm`，便可以直接開始使用。如果你的專案中沒有使用 `npm`，請參閱下一節。
 
-### Install using npm
+### 使用 npm 安裝
 
 ```
 npm install --save-dev html5-qrcode
 ```
 
-### Include minified Javascript directly
+### 直接包含壓縮後的 JavaScript
 
-If you are not using any loader, you can get the latest UMD javascript code in production from [https://unpkg.com/html5-qrcode](https://unpkg.com/html5-qrcode).
-
+如果你沒有使用任何 loader ，可以從[https://unpkg.com/html5-qrcode](https://unpkg.com/html5-qrcode) 下載最新的 UMD JavaScript 程式碼以在你的系統中使用。
 ```html
 <script src="https://unpkg.com/html5-qrcode" type="text/javascript">
 ```
 
-> In case you installed the plugin using `npm` but still use javascript without any module loader, you can get the minified script in `node_modules/html5-qrcode/html5-qrcode.min.js`
+> 如果你使用 `npm` 安裝了該擴充套件，但仍然在沒有任何 module loader 的情況下使用 JavaScript，則可以在 `node_modules/html5-qrcode/html5-qrcode.min.js` 中獲取壓縮腳本。
 
-### Using with module loaders
-If you are building on Typescript or use module loaders in Javascript, you can include the key classes directly based on needs.
-
+### 使用 module loader
+如果你使用 TypeScript 或在 JavaScript 中使用module loader，則可以根據需要直接包含關鍵類別。
 ```js
 // To use Html5QrcodeScanner (more info below)
 import {Html5QrcodeScanner} from "html5-qrcode";
@@ -36,22 +34,22 @@ import {Html5QrcodeScanner} from "html5-qrcode";
 import {Html5Qrcode} from "html5-qrcode";
 ```
 
-## Setup a target HTML container
+## 設定目標 HTML 容器
 
-In your web application, implement an `HTML` container element like `<div>` element. The library will render the QR scanning UI in this `HTML` container.
+在你的網頁應用程式中，實現一個 `HTML` 容器元素，比如 `<div>` 元素。該函式庫庫將在這個 `HTML` 容器中渲染 QR code 掃描界面。
 
 ```html
 <div id="reader" width="600px"></div>
 ```
 
-> Ideally do not set the height of this container as the height should depend on the height of the video feed from the camera. The library would honor the existing width, otherwise apply the default width. The height is derived from the aspect ratio of the video feed.
+> 理想情況下，不要設定此容器的高度，因為高度應取決於來自相機的視訊的高度。該庫將遵循現有的寬度，否則將應用預設寬度。高度是從視訊來源的長寬比得出的。
 
-## Start scanner using Javascript
+## 使用 JavaScript 啟動掃描器
 
-### Easy Mode - With end to end scanner user interface
-`Html5QrcodeScanner` lets you implement an end to end scanner with few lines of code with the default user interface which allows scanning using the camera or selecting an image from the file system.
+### 簡單模式 - 帶有端到端掃描器使用者界面
+`Html5QrcodeScanner` 允許你使用預設的使用者界面以簡單幾行代碼實現端到端的掃描器，該界面允許使用相機掃描或從檔案系統中選擇圖像進行掃描。
 
-You can set up the scanner as follows:
+你可以按照以下方式設定掃描器：
 ```js
 function onScanSuccess(decodedText, decodedResult) {
   // handle the scanned code as you like, for example:
@@ -71,15 +69,16 @@ let html5QrcodeScanner = new Html5QrcodeScanner(
 html5QrcodeScanner.render(onScanSuccess, onScanFailure);
 ```
 
-### Pro Mode - if you want to implement your own user interface
-You can use `Html5Qrcode` class to set up your QR code scanner (with your own user interface) and allow users to scan QR codes using the camera or by choosing an image file in the file system or native cameras in smartphones.
+### 專業模式 - 如果你想實現自己的使用者界面
+你可以使用 `Html5Qrcode` 類來設定你的 QR 碼掃描器（帶有自己的使用者界面），並允許使用者使用相機掃描 QR 碼，或者通過選擇檔案系統中的圖檔案或智慧型手機中的原生相機進行掃描。
 
-You can use the following APIs to `fetch camera`, `start` scanning and `stop` scanning.
+你可以使用以下 API 來 `fetch camera`、`start` 掃描和 `stop` 掃描。
 
-#### For using inline QR Code scanning with Webcam or Smartphone camera
+#### 使用網頁攝像頭或智慧型手機相機進行內嵌 QR 碼掃描
 
-##### Start Scanning
-To get a list of supported cameras, query it using static method `Html5Qrcode.getCameras()`. This method returns a `Promise` with a list of devices supported in format `{ id: "id", label: "label" }`. 
+##### 開始掃描
+要獲取支援的相機列表，可以使用靜態方法 `Html5Qrcode.getCameras()` 進行查詢。此方法返回一個包含支援裝置列表的 `Promise`，格式為 `{ id: "id", label: "label" }`。
+
 ```js
 // This method will trigger user permissions
 Html5Qrcode.getCameras().then(devices => {
@@ -96,12 +95,16 @@ Html5Qrcode.getCameras().then(devices => {
 });
 ```
 
-**Important**: Note that this method will trigger user permission if the user has not granted it already. 
-> Warning: Direct access to the camera is a powerful feature. It requires consent from the user, and your site MUST be on a secure origin (HTTPS).
-> 
-> Warning: Asking for access to the camera on page load will result in most of your users rejecting access to it. [More info](https://developers.google.com/web/fundamentals/media/capturing-images)
 
 Once you have the camera ID from `device.id`, start camera using `Html5Qrcode#start(..)`. This method returns a `Promise` with Qr code scanning initiation.
+**重要**: 請注意，如果使用者尚未授予權限，這個方法會觸發使用者授權。
+
+> 警告: 直接訪問相機是一個強大的功能。它需要使用者的同意，而且你的網站必須在安全來源（HTTPS）上執行。
+> 
+> 警告: 在頁面加載時要求訪問相機會導致大多數使用者拒絕訪問。 [更多資訊](https://developers.google.com/web/fundamentals/media/capturing-images)
+
+一旦你獲取了來自 `device.id` 的相機 ID，就可以使用 `Html5Qrcode#start(..)` 開始相機。此方法返回一個包含 QR 碼掃描啟動的 `Promise`。
+
 ```js
 const html5QrCode = new Html5Qrcode(/* element id */ "reader");
 html5QrCode.start(
@@ -121,14 +124,14 @@ html5QrCode.start(
 });
 ```
 
-> You can optionally set another argument in constructor called `verbose` to print all logs to console
+> 你可以在構造函數中選擇性地設定另一個參數 `verbose`，以將所有 log 打輸出到 console。
 
 ```js
 const html5QrCode = new Html5Qrcode("reader", /* verbose= */ true);
 ```
 
-##### Scanning without cameraId
-In mobile devices you may want users to directly scan the QR code using the back camera or the front camera for some use cases. For such cases you can avoid using the exact camera device ID that you get from `Html5Qrcode.getCameras()`. The `start()` method allows passing constraints in place of camera device ID similar to [html5 web API syntax](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax). You can start scanning like mentioned in these examples:
+##### 不使用 cameraId 進行掃描
+在移動裝置上，你可能希望使用者直接使用後置相機或前置相機掃描 QR 碼。在這些情況下，你可以避免使用從 `Html5Qrcode.getCameras()` 獲取的具體相機裝置 ID。`start()` 方法允許傳遞約束條件來代替相機裝置 ID，類似於 [html5 web API 語法](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax)。你可以按照這些範例來開始掃描：
 
 ```js
 const html5QrCode = new Html5Qrcode("reader");
@@ -155,9 +158,9 @@ Passing the `cameraId` (recommended approach) is similar to
 html5QrCode.start({ deviceId: { exact: cameraId} }, config, qrCodeSuccessCallback);
 ```
 
-##### Stop Scanning
+##### 停止掃描
 
-To stop using camera and thus stop scanning, call `Html5Qrcode#stop()` which returns a `Promise` for stopping the video feed and scanning.
+要停止使用相機並因此停止掃描，請呼叫 `Html5Qrcode#stop()`，該方法返回一個 `Promise`，用於停止視訊輸入和掃描。
 ```js
 html5QrCode.stop().then((ignore) => {
   // QR Code scanning is stopped.
@@ -166,16 +169,17 @@ html5QrCode.stop().then((ignore) => {
 });
 ```
 
-> Note that the class is stateful and `stop()` should be called to properly tear down the video and camera objects safely after calling `start()` when the scan is over or the user intend to move on. `stop()` will stop the video feed on the viewfinder.
+> 請注意，該類是有狀態的，並且在掃描結束或使用者打算繼續時，應呼叫 `stop()` 以在呼叫 `start()` 後安全地正確拆解視頻和相機對象。`stop()` 會停止 viewfinder 視訊輸入。
 
-#### For QR Code scanning using local files or inbuilt camera on Smartphones
-| Selector in Android | Selector in IOS|
+#### 使用本地檔案或智慧型手機內建相機掃描 QR 碼
+| Android 的選擇器 | iOS 的選擇器 |
 |------|-------|
-| Taken on Pixel 3, Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_android.png" width="300px" /> |  Taken on iPhone 7, Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_iphone.jpg" width="300px" /> |
+| 拍攝於 Pixel 3，Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_android.png" width="300px" /> | 拍攝於 iPhone 7，Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_iphone.jpg" width="300px" /> |
 
-You can alternatively leverage QR Code scanning for local files on the device or default camera on the device. It works similar to inline QR Code scanning.
+你也可以利用裝置上的 QR 碼掃描來處理本地檔案或預設相機。其工作方式類似於內嵌 QR 碼掃描。
 
-Define the HTML container and import the JavaScript library as mentioned above
+定義 HTML 容器並導入上述 JavaScript 函式庫
+
 ```html
 <div id="reader" width="600px" height="600px"></div>
 <script src="./dist/html5-qrcode.js"></script>

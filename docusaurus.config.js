@@ -26,6 +26,16 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    localeConfigs:{
+      'en': {
+        label: 'English',
+        direction: 'ltr',
+      },
+      'zh-Hant': {
+        label: '繁體中文', 
+        direction: 'ltr', 
+      }
+    }
   },
 
   presets: [
@@ -110,6 +120,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
             target: '',
+            
+          },
+          {
+            type: 'localeDropdown', // switch language dropdown
+            position: 'right',
           },
         ],
       },
