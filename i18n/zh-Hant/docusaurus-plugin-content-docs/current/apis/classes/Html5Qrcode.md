@@ -1,4 +1,4 @@
----
+﻿---
 sidebar_position: 1
 ---
 
@@ -6,14 +6,13 @@ sidebar_position: 1
 
 # Class: Html5Qrcode
 
-Low level APIs for building web based QR and Barcode Scanner.
+用於配置基於網頁的 QR 碼和條碼掃描器的低級 API。
 
-Supports APIs for camera as well as file based scanning.
+支援鏡頭掃描和基於檔案的掃描 API。
 
-Depending of the configuration, the class will help render code
-scanning UI on the provided parent HTML container.
+根據配置，該類將幫助在提供的父 HTML 容器中渲染程式碼掃描 UI。
 
-## Table of contents
+## 目錄
 
 ### Constructors
 
@@ -41,49 +40,53 @@ scanning UI on the provided parent HTML container.
 
 • **new Html5Qrcode**(`elementId`, `configOrVerbosityFlag?`)
 
-Initialize the code scanner.
-
+初始化程式碼掃描器。
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `elementId` | `string` | Id of the HTML element. |
-| `configOrVerbosityFlag?` | `boolean` \| [`Html5QrcodeFullConfig`](../interfaces/Html5QrcodeFullConfig.md) | optional, config object of type [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) or a boolean verbosity flag (to maintain backward compatibility). If nothing is passed, default values would be used. If a boolean value is used, it'll be used to set verbosity. Pass a config value to configure the Html5Qrcode scanner as per needs. Use of `configOrVerbosityFlag` as a boolean value is being deprecated since version 2.0.7. TODO(mebjas): Deprecate the verbosity boolean flag completely. |
+| elementId | string | Id of the HTML element. |
+| configOrVerbosityFlag? | boolean \| [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) | optional, config object of type [Html5QrcodeFullConfig](../interfaces/Html5QrcodeFullConfig.md) or a boolean verbosity flag (to maintain backward compatibility). If nothing is passed, default values would be used. If a boolean value is used, it'll be used to set verbosity. Pass a config value to configure the Html5Qrcode scanner as per needs. Use of configOrVerbosityFlag as a boolean value is being deprecated since version 2.0.7. TODO(mebjas): Deprecate the verbosity boolean flag completely. |
+#### 參數
 
-#### Defined in
+| 名稱 | 類型 | 描述 |
+| :------ | :------ | :------ |
+| `elementId` | `string` | HTML 元素的 ID。 |
+| `configOrVerbosityFlag?` | `boolean` \| [`Html5QrcodeFullConfig`](../interfaces/Html5QrcodeFullConfig.md) | 可選，`Html5QrcodeFullConfig` 類型的配置對象或布林型詳細訊息標誌（以維持向後兼容）。如果未傳遞任何值，則將使用預設值。如果使用布林值，它將用於設定詳細訊息。根據需要的設定傳遞設定值設定 Html5Qrcode 掃描器。自版本 2.0.7 起，不建議使用 configOrVerbosityFlag 作為布林值。 TODO(mebjas)：完全棄用詳細布林標誌。
+
+#### 定義於
 
 [html5-qrcode.ts:313](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L313)
 
-## Methods
+## 方法
 
 ### applyVideoConstraints
 
 ▸ **applyVideoConstraints**(`videoConstaints`): `Promise`<`void`\>
 
-Apply a video constraints on running video track from camera.
+對來自鏡頭的執行影片軌道應用影片約束。
 
-Important:
- 1. Must be called only if the camera based scanning is in progress.
- 2. Changing aspectRatio while scanner is running is not yet supported.
+重要事項：
+1. 只有在進行基於鏡頭的掃描時，才必須呼叫此方法。
+2. 在掃描器執行時更改 `aspectRatio` 尚不支援。
 
 **`Throws`**
 
-error if the scanning is not in running state.
+如果掃描不在執行狀態，則拋出錯誤。
 
-#### Parameters
+#### 參數
 
-| Name | Type |
+| 名稱 | 類型 |
 | :------ | :------ |
 | `videoConstaints` | `MediaTrackConstraints` |
 
-#### Returns
+#### 回傳值
 
 `Promise`<`void`\>
 
-a Promise which succeeds if the passed constraints are applied,
- fails otherwise.
+一個 Promise，若傳遞的約束已成功應用則成功，否則失敗。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:829](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L829)
 
@@ -93,16 +96,16 @@ ___
 
 ▸ **clear**(): `void`
 
-Clears the existing canvas.
+清除現有的畫布。
 
-Note: in case of ongoing web cam based scan, it needs to be explicitly
-closed before calling this method, else it will throw exception.
+注意：如果有正在進行的網路鏡頭掃描，需要在呼叫此方法之前明確關閉，否則會拋出異常。
 
-#### Returns
+
+#### 回傳值
 
 `void`
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:758](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L758)
 
@@ -115,7 +118,9 @@ ___
 Returns [CameraCapabilities](../interfaces/CameraCapabilities.md) of the running video track.
 
 TODO(minhazav): Document this API, currently hidden.
+返回執行追蹤的影片 [CameraCapabilities](../interfaces/CameraCapabilities.md)。
 
+TODO(minhazav): 文檔化此 API，目前為隱藏。
 **`Throws`**
 
 error if the scanning is not in running state.
