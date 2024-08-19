@@ -174,7 +174,7 @@ html5QrCode.stop().then((ignore) => {
 #### 使用本地檔案或智慧型手機內建相機掃描 QR 碼
 | Android 的選擇器 | iOS 的選擇器 |
 |------|-------|
-| 拍攝於 Pixel 3，Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_android.png" width="300px" /> | 拍攝於 iPhone 7，Google Chrome<br /><img src="https://scanapp.org/assets/github_assets/selector_iphone.jpg" width="300px" /> |
+| 使用 Pixel 3，Google Chrome 拍攝<br /><img src="https://scanapp.org/assets/github_assets/selector_android.png" width="300px" /> | 使用 iPhone 7，Google Chrome 拍攝<br /><img src="https://scanapp.org/assets/github_assets/selector_iphone.jpg" width="300px" /> |
 
 你也可以利用裝置上的 QR 碼掃描來處理本地檔案或預設相機。其工作方式類似於內嵌 QR 碼掃描。
 

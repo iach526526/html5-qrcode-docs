@@ -53,11 +53,11 @@ ___
 
 所有無效的值將被忽略。如果為 null 或 undefined，則會使用所有支援的格式進行掃描。除非你希望僅限於某些格式或想要提高效能，否則不應設定此值。
 
-#### Inherited from
+#### 繼承自
 
 Html5QrcodeConfigs.formatsToSupport
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:83](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L83)
 
@@ -67,24 +67,25 @@ ___
 
 • `Optional` **useBarCodeDetectorIfSupported**: `boolean`
 
-BarcodeDetector is being implemented by browsers at the moment.
-It has very limited browser support but as it gets available it could
-enable faster native code scanning experience.
+BarcodeDetector 目前正在由瀏覽器實現。
+目前瀏覽器的支援非常有限，但隨著它的可用性增加，可能會
+啟用更快速的原生程式碼掃描體驗。
 
-Set this flag to true, to enable using BarcodeDetector if
-supported. This is true by default.
+將此標誌設定為 true，以啟用支援時使用 BarcodeDetector。
+預設情況下，此值為 true。
 
-Documentations:
+檔案：
  - https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector
  - https://web.dev/shape-detection/#barcodedetector
 
-#### Inherited from
+#### 繼承自
 
 Html5QrcodeConfigs.useBarCodeDetectorIfSupported
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:97](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L97)
+
 
 ___
 
@@ -92,8 +93,8 @@ ___
 
 • **verbose**: `undefined` \| `boolean`
 
-If true, all logs would be printed to console. False by default.
+如果為 true，所有日誌將會輸出到 console。預設為 false。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:120](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L120)
