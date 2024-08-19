@@ -1,14 +1,14 @@
----
+﻿---
 sidebar_position: 2
 ---
 
-# Supported frameworks
+# 支援的框架
 
-We are working continuously on adding support for more and more platforms. If you find a platform or a browser where the library is not working, please feel free to file an issue. Check the [demo link](https://blog.minhazav.dev/research/html5-qrcode.html) to test it out.
+我們正在持續添加對更多平台的支援。如果你發現某個平台或瀏覽器上該庫無法正常工作，請隨時提交 issue。查看 [demo 連結](https://blog.minhazav.dev/research/html5-qrcode.html) 進行測試。
 
-**Legends**
--   ![](https://scanapp.org/assets/github_assets/done.png) Means full support — inline webcam and file based.
--   ![](https://scanapp.org/assets/github_assets/partial.png) Means partial support — only file based, webcam in progress.
+**圖例**
+-   ![](https://scanapp.org/assets/github_assets/done.png) 代表完全支援 — 內嵌網路攝影機和基於檔案的掃描。
+-   ![](https://scanapp.org/assets/github_assets/partial.png) 代表部分支援 — 僅支援基於檔案的掃描，網路攝影機正在開發中。
 
 ### PC / Mac
 
@@ -29,12 +29,12 @@ We are working continuously on adding support for more and more platforms. If yo
 |![](https://scanapp.org/assets/github_assets/done.png)| ![](https://scanapp.org/assets/github_assets/done.png)* | ![](https://scanapp.org/assets/github_assets/done.png)* | ![](https://scanapp.org/assets/github_assets/partial.png) 
 
 
-> \* Supported for IOS versions >= 15.1
->
-> Before version 15.1, Webkit for IOS is used by Chrome, Firefox, and other browsers in IOS and they do not have webcam permissions yet. There is an ongoing issue on fixing the support for iOS - [issue/14](https://github.com/mebjas/html5-qrcode/issues/14)
+\* 支援 iOS 版本 >= 15.1
 
-### Framework support
-The library can be easily used with several other frameworks, I have been adding examples for a few of them and would continue to add more.
+> 在 15.1 版本之前，iOS 的 Webkit 被 Chrome、Firefox 和其他瀏覽器使用，且它們尚未獲得攝像頭權限。iOS 支援修復正在進行中 - [issue/14](https://github.com/mebjas/html5-qrcode/issues/14)
+
+### 框架支援
+該庫可以輕鬆地與其他多個框架一起使用，我已經添加了一些範例，並會繼續添加更多。
 
 |<img src="https://scanapp.org/assets/github_assets/html5.png" width="30px" />| <img src="https://scanapp.org/assets/github_assets/vuejs.png" width="30px" />|<img src="https://scanapp.org/assets/github_assets/electron.png" width="30px" /> | <img src="https://scanapp.org/assets/github_assets/react.svg" width="30px" /> | <img src="https://seeklogo.com/images/L/lit-logo-6B43868CDC-seeklogo.com.png" width="30px" />
 | -------- | -------- | -------- | -------- | -------- |
