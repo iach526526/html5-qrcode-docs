@@ -80,7 +80,7 @@ sidebar_position: 1
 | :------ | :------ |
 | `videoConstaints` | `MediaTrackConstraints` |
 
-#### 回傳值
+#### 回傳
 
 `Promise`<`void`\>
 
@@ -101,7 +101,7 @@ ___
 注意：如果有正在進行的網路鏡頭掃描，需要在呼叫此方法之前明確關閉，否則會拋出異常。
 
 
-#### 回傳值
+#### 回傳
 
 `void`
 
@@ -123,14 +123,14 @@ TODO(minhazav): Document this API, currently hidden.
 TODO(minhazav): 文檔化此 API，目前為隱藏。
 **`Throws`**
 
-error if the scanning is not in running state.
+如果掃描不在運行狀態，則拋出錯誤。
 
-#### Returns
+#### 回傳
 
 [`CameraCapabilities`](../interfaces/CameraCapabilities.md)
 
 capabilities of the running camera.
-
+運行中相機的能力
 #### Defined in
 
 [html5-qrcode.ts:811](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L811)
@@ -152,7 +152,7 @@ Important:
 
 error if the scanning is not in running state.
 
-#### Returns
+#### 回傳
 
 `MediaTrackCapabilities`
 
@@ -180,7 +180,7 @@ Important:
 
 error if the scanning is not in running state.
 
-#### Returns
+#### 回傳
 
 `MediaTrackSettings`
 
@@ -198,7 +198,7 @@ ___
 
 Gets state of the camera scan.
 
-#### Returns
+#### 回傳
 
 [`Html5QrcodeScannerState`](../enums/Html5QrcodeScannerState.md)
 
@@ -226,7 +226,7 @@ error if method is called when scanner is not in scanning state.
 | :------ | :------ | :------ |
 | `shouldPauseVideo?` | `boolean` | (Optional, default = false) If true the video will be paused. |
 
-#### Returns
+#### 回傳
 
 `void`
 
@@ -253,7 +253,7 @@ callbacks.
 
 error if method is called when scanner is not in paused state.
 
-#### Returns
+#### 回傳
 
 `void`
 
@@ -279,7 +279,7 @@ call stop() if the camera-based scanning was ongoing.
 | `imageFile` | `File` | a local file with Image content. |
 | `showImage?` | `boolean` | if true the Image will be rendered on given element. |
 
-#### Returns
+#### 回傳
 
 `Promise`<`string`\>
 
@@ -311,7 +311,7 @@ call stop() if the camera-based scanning was ongoing.
 | `imageFile` | `File` | a local file with Image content. |
 | `showImage?` | `boolean` | if true the Image will be rendered on given element. |
 
-#### Returns
+#### 回傳
 
 `Promise`<[`Html5QrcodeResult`](../interfaces/Html5QrcodeResult.md)\>
 
@@ -343,7 +343,7 @@ Start scanning QR codes or bar codes for a given camera.
 | `qrCodeSuccessCallback` | `undefined` \| `QrcodeSuccessCallback` | Callback called when an instance of a QR code or any other supported bar code is found. |
 | `qrCodeErrorCallback` | `undefined` \| `QrcodeErrorCallback` | Callback called in cases where no instance of QR code or any other supported bar code is found. |
 
-#### Returns
+#### 回傳
 
 `Promise`<``null``\>
 
@@ -362,7 +362,7 @@ ___
 
 Stops streaming QR Code video and scanning.
 
-#### Returns
+#### 回傳
 
 `Promise`<`void`\>
 
@@ -380,7 +380,7 @@ ___
 
 Returns list of [CameraDevice](../interfaces/CameraDevice.md) supported by the device.
 
-#### Returns
+#### 回傳
 
 `Promise`<[`CameraDevice`](../interfaces/CameraDevice.md)[]\>
 

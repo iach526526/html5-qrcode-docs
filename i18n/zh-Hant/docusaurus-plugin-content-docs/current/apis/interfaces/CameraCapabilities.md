@@ -6,28 +6,27 @@ sidebar_position: 5
 
 # Interface: CameraCapabilities
 
-Class exposing different capabilities of camera.
+Class 描述了相機不同的功能
+## 內容
 
-## Table of contents
-
-### Methods
+### 方法
 
 - [torchFeature](CameraCapabilities.md#torchfeature)
 - [zoomFeature](CameraCapabilities.md#zoomfeature)
 
-## Methods
+## 方法
 
 ### torchFeature
 
 ▸ **torchFeature**(): `BooleanCameraCapability`
 
-Torch capability of the camera.
+相機的手電筒能力。
 
-#### Returns
+#### 回傳
 
 `BooleanCameraCapability`
 
-#### Defined in
+#### 定義於
 
 [camera/core.ts:49](https://github.com/mebjas/html5-qrcode/blob/600717e/src/camera/core.ts#L49)
 
@@ -37,12 +36,12 @@ ___
 
 ▸ **zoomFeature**(): `RangeCameraCapability`
 
-Zoom capability of the camera.
+相機的縮放能力。
 
-#### Returns
+#### 回傳
 
 `RangeCameraCapability`
 
-#### Defined in
+#### 定義於
 
 [camera/core.ts:46](https://github.com/mebjas/html5-qrcode/blob/600717e/src/camera/core.ts#L46)
