@@ -1,49 +1,45 @@
----
+﻿---
 sidebar_position: 2
 ---
 
 [html5-qrcode](../) / Html5QrcodeFullConfig
 
-# Interface: Html5QrcodeFullConfig
+# 介面: Html5QrcodeFullConfig
 
-Interface for full configuration of [Html5Qrcode](../classes/Html5Qrcode.md).
+[Html5Qrcode](../classes/Html5Qrcode.md) 的完整配置介面。
 
-Notes: Ideally we don't need to have two interfaces for this purpose, but
-since the public APIs before version 2.0.8 allowed passing a boolean verbose
-flag to constructor we need to allow users to pass Html5QrcodeFullConfig or
-boolean flag to be backward compatible.
-In future versions these two interfaces can be merged.
+注意：理想情況下，我們不需要這兩個介面，但由於在 2.0.8 版本之前的公共 API 允許將布林值的 verbose 標誌傳遞給構造函數，因此我們需要允許使用者傳遞 Html5QrcodeFullConfig 或布林值標誌以保持向後兼容性。在未來的版本中，這兩個介面可以合併。
 
-## Hierarchy
+## 階層
 
 - `Html5QrcodeConfigs`
 
   ↳ **`Html5QrcodeFullConfig`**
 
-## Table of contents
+## 內容
 
-### Properties
+### 屬性
 
 - [experimentalFeatures](Html5QrcodeFullConfig.md#experimentalfeatures)
 - [formatsToSupport](Html5QrcodeFullConfig.md#formatstosupport)
 - [useBarCodeDetectorIfSupported](Html5QrcodeFullConfig.md#usebarcodedetectorifsupported)
 - [verbose](Html5QrcodeFullConfig.md#verbose)
 
-## Properties
+## 屬性
 
 ### experimentalFeatures
 
 • `Optional` **experimentalFeatures**: `ExperimentalFeaturesConfig`
 
-Config for experimental features.
+實驗性功能的配置。
 
-Everything is false by default.
+預設情況下所有設定均為 false。
 
-#### Inherited from
+#### 繼承自
 
 Html5QrcodeConfigs.experimentalFeatures
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:104](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L104)
 
@@ -53,12 +49,9 @@ ___
 
 • `Optional` **formatsToSupport**: [`Html5QrcodeSupportedFormats`](../enums/Html5QrcodeSupportedFormats.md)[]
 
-Array of formats to support of type [Html5QrcodeSupportedFormats](../enums/Html5QrcodeSupportedFormats.md).
+支援的格式類型，為 [Html5QrcodeSupportedFormats](../enums/Html5QrcodeSupportedFormats.md) 的陣列。
 
-All invalid values would be ignored. If null or underfined all supported
-formats will be used for scanning. Unless you want to limit the scan to
-only certain formats or want to improve performance, you should not set
-this value.
+所有無效的值將被忽略。如果為 null 或 undefined，則會使用所有支援的格式進行掃描。除非你希望僅限於某些格式或想要提高效能，否則不應設定此值。
 
 #### Inherited from
 

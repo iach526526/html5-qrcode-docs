@@ -6,22 +6,22 @@ sidebar_position: 1
 
 # Interface: Html5QrcodeResult
 
-QrCode result object.
+QR code result 物件。
 
-## Table of contents
+## 目錄
 
-### Properties
+### 屬性
 
 - [decodedText](Html5QrcodeResult.md#decodedtext)
 - [result](Html5QrcodeResult.md#result)
 
-## Properties
+## 屬性
 
 ### decodedText
 
 • **decodedText**: `string`
 
-#### Defined in
+#### 定義於
 
 [core.ts:184](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L184)
 
@@ -31,6 +31,6 @@ ___
 
 • **result**: `QrcodeResult`
 
-#### Defined in
+#### 定義於
 
 [core.ts:185](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L185)
