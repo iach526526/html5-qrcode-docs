@@ -119,7 +119,7 @@ ___
 Returns [CameraCapabilities](../interfaces/CameraCapabilities.md) of the running video track.
 
 TODO(minhazav): Document this API, currently hidden.
-返回執行追蹤的影片 [CameraCapabilities](../interfaces/CameraCapabilities.md)。
+回傳執行追蹤的影片 [CameraCapabilities](../interfaces/CameraCapabilities.md)。
 
 TODO(minhazav): 文檔化此 API，目前為隱藏。
 **`Throws`**
@@ -130,9 +130,8 @@ TODO(minhazav): 文檔化此 API，目前為隱藏。
 
 [`CameraCapabilities`](../interfaces/CameraCapabilities.md)
 
-capabilities of the running camera.
 執行中相機的能力
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:811](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L811)
 
@@ -142,24 +141,24 @@ ___
 
 ▸ **getRunningTrackCapabilities**(): `MediaTrackCapabilities`
 
-Returns the capabilities of the running video track.
+回傳執行中影片軌道的能力。
 
-Read more: https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getConstraints
+閱讀更多：https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getConstraints
 
-Important:
- 1. Must be called only if the camera based scanning is in progress.
+重要事項：
+1. 僅當基於相機的掃描正在進行時才可呼叫此方法。
 
 **`Throws`**
 
-error if the scanning is not in running state.
+如果掃描未處於執行狀態，則拋出錯誤。
 
 #### 回傳
 
 `MediaTrackCapabilities`
 
-capabilities of the running camera.
+執行中相機的能力。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:782](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L782)
 
@@ -169,25 +168,24 @@ ___
 
 ▸ **getRunningTrackSettings**(): `MediaTrackSettings`
 
-Returns the object containing the current values of each constrainable
-property of the running video track.
+回傳包含執行中影片軌道的每個可約束屬性當前值的物件。
 
-Read more: https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings
+閱讀更多：https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings
 
-Important:
- 1. Must be called only if the camera based scanning is in progress.
+重要事項：
+1. 僅當相機掃描正在進行時才可呼叫此方法。
 
 **`Throws`**
 
-error if the scanning is not in running state.
+如果掃描未處於執行狀態，則拋出錯誤。
 
 #### 回傳
 
 `MediaTrackSettings`
 
-settings of the running media track.
+執行中媒體軌道的設定。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:799](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L799)
 
@@ -197,15 +195,15 @@ ___
 
 ▸ **getState**(): [`Html5QrcodeScannerState`](../enums/Html5QrcodeScannerState.md)
 
-Gets state of the camera scan.
+取得相機掃描的狀態。
 
 #### 回傳
 
 [`Html5QrcodeScannerState`](../enums/Html5QrcodeScannerState.md)
 
-state of type ScannerState.
+`ScannerState` 型別的狀態。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:539](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L539)
 
@@ -215,23 +213,23 @@ ___
 
 ▸ **pause**(`shouldPauseVideo?`): `void`
 
-Pauses the ongoing scan.
+暫停正在進行的掃描。
 
 **`Throws`**
 
-error if method is called when scanner is not in scanning state.
+當掃描器未處於掃描狀態時呼叫此方法，則拋出錯誤。
 
-#### Parameters
+#### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `shouldPauseVideo?` | `boolean` | (Optional, default = false) If true the video will be paused. |
+| `shouldPauseVideo?` | `boolean` | （可選，預設值為 false）如果為 true，則影片將被暫停。 |
 
 #### 回傳
 
 `void`
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:480](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L480)
 
@@ -241,24 +239,21 @@ ___
 
 ▸ **resume**(): `void`
 
-Resumes the paused scan.
+恢復暫停的掃描。
 
-If the video was previously paused by setting `shouldPauseVideo``
-to `true` in [(shouldPauseVideo)](Html5Qrcode.md#pause), calling
-this method will resume the video.
+如果影片之前因設置 `shouldPauseVideo` 為 `true` 在[(shouldPauseVideo)](Html5Qrcode.md#pause)中被暫停，則呼叫此方法將恢復影片。
 
-Note: with this caller will start getting results in success and error
-callbacks.
+注意：呼叫者將開始在成功和錯誤 Callback 中獲取結果。
 
 **`Throws`**
 
-error if method is called when scanner is not in paused state.
+如果方法在掃描器未處於暫停狀態時被呼叫，則拋出錯誤。
 
 #### 回傳
 
 `void`
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:508](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L508)
 
@@ -268,29 +263,27 @@ ___
 
 ▸ **scanFile**(`imageFile`, `showImage?`): `Promise`<`string`\>
 
-Scans an Image File for QR Code.
+掃描圖像文件以識別 QR code 。
 
-This feature is mutually exclusive to camera-based scanning, you should
-call stop() if the camera-based scanning was ongoing.
+此功能與基於相機的掃描互斥，如果基於相機的掃描正在進行中，應呼叫 `stop()`。
 
-#### Parameters
+#### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `imageFile` | `File` | a local file with Image content. |
-| `showImage?` | `boolean` | if true the Image will be rendered on given element. |
+| `imageFile` | `File` | 含有圖像內容的本地文件。 |
+| `showImage?` | `boolean` | 如果為 true，圖像將顯示在給定元素上。 |
 
 #### 回傳
 
 `Promise`<`string`\>
 
-Promise with decoded QR code string on success and error message
-on failure. Failure could happen due to different reasons:
-  1. QR Code decode failed because enough patterns not found in image.
-  2. Input file was not image or unable to load the image or other image
-     load errors.
+在成功時回傳解碼的 QR code 字串的 Promise，在失敗時回傳錯誤信息。
+失敗可能是由於不同的原因：
+1. QR code 解碼失敗，因為圖像中沒有找到足夠的圖案。
+2. 輸入文件不是圖像或無法加載圖像，或其他圖像加載錯誤。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:615](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L615)
 
@@ -300,30 +293,27 @@ ___
 
 ▸ **scanFileV2**(`imageFile`, `showImage?`): `Promise`<[`Html5QrcodeResult`](../interfaces/Html5QrcodeResult.md)\>
 
-Scans an Image File for QR Code & returns [Html5QrcodeResult](../interfaces/Html5QrcodeResult.md).
+掃描圖像文件以識別 QR code 並回傳 [`Html5QrcodeResult`](../interfaces/Html5QrcodeResult.md)。
 
-This feature is mutually exclusive to camera-based scanning, you should
-call stop() if the camera-based scanning was ongoing.
+此功能與基於相機的掃描互斥，如果基於相機的掃描正在進行中，應呼叫 `stop()`。
 
-#### Parameters
+#### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `imageFile` | `File` | a local file with Image content. |
-| `showImage?` | `boolean` | if true the Image will be rendered on given element. |
+| `imageFile` | `File` | 含有圖像內容的本地文件。 |
+| `showImage?` | `boolean` | 如果為 true，圖像將顯示在給定元素上。 |
 
 #### 回傳
 
 `Promise`<[`Html5QrcodeResult`](../interfaces/Html5QrcodeResult.md)\>
 
-Promise which resolves with result of type
-[Html5QrcodeResult](../interfaces/Html5QrcodeResult.md).
+Promise 解析並回傳類型為 [`Html5QrcodeResult`](../interfaces/Html5QrcodeResult.md) 的結果。
 
- This is a WIP method, it's available as a public method but not
-documented.
-TODO(mebjas): Replace scanFile with ScanFileV2
+這是一個工作進行中的方法，它作為公共方法可用但未記錄。
+TODO(mebjas): 用 `ScanFileV2` 替換 `scanFile`。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:638](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L638)
 
@@ -333,25 +323,24 @@ ___
 
 ▸ **start**(`cameraIdOrConfig`, `configuration`, `qrCodeSuccessCallback`, `qrCodeErrorCallback`): `Promise`<``null``\>
 
-Start scanning QR codes or bar codes for a given camera.
+啟動 QR code 或條形碼掃描器以掃描指定相機的內容。
 
-#### Parameters
+#### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `cameraIdOrConfig` | `string` \| `MediaTrackConstraints` | Identifier of the camera, it can either be the camera id retrieved from Html5Qrcode#getCameras() method or object with facing mode constraint. |
-| `configuration` | `undefined` \| [`Html5QrcodeCameraScanConfig`](../interfaces/Html5QrcodeCameraScanConfig.md) | Extra configurations to tune the code scanner. |
-| `qrCodeSuccessCallback` | `undefined` \| `QrcodeSuccessCallback` | Callback called when an instance of a QR code or any other supported bar code is found. |
-| `qrCodeErrorCallback` | `undefined` \| `QrcodeErrorCallback` | Callback called in cases where no instance of QR code or any other supported bar code is found. |
+| `cameraIdOrConfig` | `string` \| `MediaTrackConstraints` | 相機的識別碼，它可以是從 `Html5Qrcode#getCameras()` 方法檢索的相機 ID，或具有面向模式約束的對象。 |
+| `configuration` | `undefined` \| [`Html5QrcodeCameraScanConfig`](../interfaces/Html5QrcodeCameraScanConfig.md) | 用於調整掃描器的額外配置。 |
+| `qrCodeSuccessCallback` | `undefined` \| `QrcodeSuccessCallback` | 當找到 QR code 或任何其他支援的條形碼時調用的 Callback 。 |
+| `qrCodeErrorCallback` | `undefined` \| `QrcodeErrorCallback` | 當未找到 QR code 或其他支援的條形碼時調用的 Callback 。 |
 
 #### 回傳
 
 `Promise`<``null``\>
 
-Promise for starting the scan. The Promise can fail if the user
-doesn't grant permission or some API is not supported by the browser.
+啟動掃描的 Promise。該 Promise 可能會因為用戶未授予權限或瀏覽器不支援某些 API 而失敗。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:360](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L360)
 
@@ -361,15 +350,15 @@ ___
 
 ▸ **stop**(): `Promise`<`void`\>
 
-Stops streaming QR Code video and scanning.
+停止輸出串流 QR code 並停止掃描。
 
 #### 回傳
 
 `Promise`<`void`\>
 
-Promise for safely closing the video stream.
+安全關閉視訊來源的 Promise。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:548](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L548)
 
@@ -379,14 +368,14 @@ ___
 
 ▸ `Static` **getCameras**(): `Promise`<[`CameraDevice`](../interfaces/CameraDevice.md)[]\>
 
-Returns list of [CameraDevice](../interfaces/CameraDevice.md) supported by the device.
+回傳設備支援的 [`CameraDevice`](../interfaces/CameraDevice.md) 列表。
 
 #### 回傳
 
 `Promise`<[`CameraDevice`](../interfaces/CameraDevice.md)[]\>
 
-array of camera devices on success.
+成功時回傳相機設備的陣列。
 
-#### Defined in
+#### 定義於
 
 [html5-qrcode.ts:767](https://github.com/mebjas/html5-qrcode/blob/600717e/src/html5-qrcode.ts#L767)

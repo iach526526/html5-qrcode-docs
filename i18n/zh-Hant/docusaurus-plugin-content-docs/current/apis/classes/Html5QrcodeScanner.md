@@ -159,13 +159,13 @@ ___
 
 ▸ **getState**(): [`Html5QrcodeScannerState`](../enums/Html5QrcodeScannerState.md)
 
-Gets state of the camera scan.
+取得相機掃描的狀態。
 
 #### 回傳
 
 [`Html5QrcodeScannerState`](../enums/Html5QrcodeScannerState.md)
 
-state of type [Html5QrcodeScannerState](../enums/Html5QrcodeScannerState.md).
+回傳的狀態類型為 [Html5QrcodeScannerState](../enums/Html5QrcodeScannerState.md)。
 
 #### 定義於
 
@@ -177,20 +177,20 @@ ___
 
 ▸ **pause**(`shouldPauseVideo?`): `void`
 
-Pauses the ongoing scan.
+暫停正在進行的掃描。
 
-Notes:
--   Should only be called if camera scan is ongoing.
+注意事項：
+- 只有在相機掃描進行中時才應該呼叫此方法。
 
 **`Throws`**
 
-error if method is called when scanner is not in scanning state.
+當掃描器未處於掃描狀態時呼叫該方法將引發錯誤。
 
 #### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `shouldPauseVideo?` | `boolean` | (Optional, default = false) If `true` the video will be paused. |
+| `shouldPauseVideo?` | `boolean` | （可選，預設值為 false）如果為 `true`，影片將被暫停。 |
 
 #### 回傳
 
@@ -206,14 +206,14 @@ ___
 
 ▸ **render**(`qrCodeSuccessCallback`, `qrCodeErrorCallback`): `void`
 
-Renders the User Interface.
+呈現用戶介面。
 
 #### 參數
 
-| Name | Type | Description |
+| 名稱 | 類型 | 說明 |
 | :------ | :------ | :------ |
-| `qrCodeSuccessCallback` | `QrcodeSuccessCallback` | Callback called when an instance of a QR code or any other supported bar code is found. |
-| `qrCodeErrorCallback` | `undefined` \| `QrcodeErrorCallback` | optional, callback called in cases where no instance of QR code or any other supported bar code is found. |
+| `qrCodeSuccessCallback` | `QrcodeSuccessCallback` | 當找到 QR 碼或任何其他支持的條形碼時呼叫的回調函數。 |
+| `qrCodeErrorCallback` | `undefined` \| `QrcodeErrorCallback` | 可選，當未找到 QR 碼或其他支持的條形碼時呼叫的回調函數。 |
 
 #### 回傳
 
@@ -229,20 +229,18 @@ ___
 
 ▸ **resume**(): `void`
 
-Resumes the paused scan.
+恢復已暫停的掃描。
 
-If the video was previously paused by setting `shouldPauseVideo`
-to `true` in [(shouldPauseVideo)](Html5QrcodeScanner.md#pause),
-calling this method will resume the video.
+如果之前通過設置 `shouldPauseVideo` 為 `true` 而暫停了影片，
+呼叫此方法將恢復影片播放。
 
-Notes:
--   Should only be called if camera scan is ongoing.
--   With this caller will start getting results in success and error
-callbacks.
+注意事項：
+- 只有在相機掃描進行中時才應該呼叫此方法。
+- 呼叫此方法後，呼叫者將開始在成功和錯誤回調中接收結果。
 
 **`Throws`**
 
-error if method is called when scanner is not in paused state.
+當掃描器未處於暫停狀態時呼叫該方法將引發錯誤。
 
 #### 回傳
 

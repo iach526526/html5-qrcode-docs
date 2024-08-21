@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # html5-qrcode
 
-[mebjas/html5-qrcode](https://github.com/mebjas/html5-qrcode) 是一個開源的基於網頁的 QR 碼和條碼掃描庫，由 [mebjas@](https://github.com/mebjas) 在 [Apache License 2.0](https://github.com/mebjas/html5-qrcode/blob/master/LICENSE) 授權下開發。
+[mebjas/html5-qrcode](https://github.com/mebjas/html5-qrcode) 是一個開源的基於網頁的 QR code 和條碼掃描函式庫，由 [mebjas@](https://github.com/mebjas) 在 [Apache License 2.0](https://github.com/mebjas/html5-qrcode/blob/master/LICENSE) 授權下開發。
 
-> 適用於網頁的輕量級且跨平台的 QR 碼和條碼掃描函式庫，
+> 適用於網頁的輕量級且跨平台的 QR code 和條碼掃描函式庫，
 >
-> 使用這個輕量級的函式庫可以輕鬆快速地將 QR 碼、條碼和其他常見條碼掃描功能整合到你的網頁應用程序中。
+> 使用這個輕量級的函式庫可以輕鬆快速地將 QR code 、條碼和其他常見條碼掃描功能整合到你的網頁應用程序中。
 
 支援兩種 API
 
