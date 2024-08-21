@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ScanApp',
   tagline: 'Documentation for mebjas/html5-qrcode',
-  url: 'https://scanapp.org/',
-  baseUrl: '/html5-qrcode-docs/',
+  url: 'https://html5-qrcode-docs.vercel.app/',
+  baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
