@@ -4,13 +4,13 @@ sidebar_position: 3
 
 [html5-qrcode](../) / Html5QrcodeSupportedFormats
 
-# Enumeration: Html5QrcodeSupportedFormats
+# 列舉：Html5QrcodeSupportedFormats
 
-Code formats supported by this library.
+此函式庫支援的代碼格式。
 
-## Table of contents
+## 目錄
 
-### Enumeration Members
+### 列舉成員
 
 - [AZTEC](Html5QrcodeSupportedFormats.md#aztec)
 - [CODABAR](Html5QrcodeSupportedFormats.md#codabar)
@@ -30,13 +30,13 @@ Code formats supported by this library.
 - [UPC\_E](Html5QrcodeSupportedFormats.md#upc_e)
 - [UPC\_EAN\_EXTENSION](Html5QrcodeSupportedFormats.md#upc_ean_extension)
 
-## Enumeration Members
+## 列舉成員
 
 ### AZTEC
 
 • **AZTEC** = ``1``
 
-#### Defined in
+#### 定義於
 
 [core.ts:16](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L16)
 
@@ -46,7 +46,7 @@ ___
 
 • **CODABAR** = ``2``
 
-#### Defined in
+#### 定義於
 
 [core.ts:17](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L17)
 
@@ -56,7 +56,7 @@ ___
 
 • **CODE\_128** = ``5``
 
-#### Defined in
+#### 定義於
 
 [core.ts:20](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L20)
 
@@ -66,7 +66,7 @@ ___
 
 • **CODE\_39** = ``3``
 
-#### Defined in
+#### 定義於
 
 [core.ts:18](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L18)
 
@@ -76,7 +76,7 @@ ___
 
 • **CODE\_93** = ``4``
 
-#### Defined in
+#### 定義於
 
 [core.ts:19](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L19)
 
@@ -86,7 +86,7 @@ ___
 
 • **DATA\_MATRIX** = ``6``
 
-#### Defined in
+#### 定義於
 
 [core.ts:21](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L21)
 
@@ -96,7 +96,7 @@ ___
 
 • **EAN\_13** = ``9``
 
-#### Defined in
+#### 定義於
 
 [core.ts:24](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L24)
 
@@ -106,7 +106,7 @@ ___
 
 • **EAN\_8** = ``10``
 
-#### Defined in
+#### 定義於
 
 [core.ts:25](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L25)
 
@@ -116,7 +116,7 @@ ___
 
 • **ITF** = ``8``
 
-#### Defined in
+#### 定義於
 
 [core.ts:23](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L23)
 
@@ -126,7 +126,7 @@ ___
 
 • **MAXICODE** = ``7``
 
-#### Defined in
+#### 定義於
 
 [core.ts:22](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L22)
 
@@ -136,7 +136,7 @@ ___
 
 • **PDF\_417** = ``11``
 
-#### Defined in
+#### 定義於
 
 [core.ts:26](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L26)
 
@@ -146,7 +146,7 @@ ___
 
 • **QR\_CODE** = ``0``
 
-#### Defined in
+#### 定義於
 
 [core.ts:15](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L15)
 
@@ -156,7 +156,7 @@ ___
 
 • **RSS\_14** = ``12``
 
-#### Defined in
+#### 定義於
 
 [core.ts:27](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L27)
 
@@ -166,7 +166,7 @@ ___
 
 • **RSS\_EXPANDED** = ``13``
 
-#### Defined in
+#### 定義於
 
 [core.ts:28](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L28)
 
@@ -176,7 +176,7 @@ ___
 
 • **UPC\_A** = ``14``
 
-#### Defined in
+#### 定義於
 
 [core.ts:29](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L29)
 
@@ -186,7 +186,7 @@ ___
 
 • **UPC\_E** = ``15``
 
-#### Defined in
+#### 定義於
 
 [core.ts:30](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L30)
 
@@ -196,6 +196,6 @@ ___
 
 • **UPC\_EAN\_EXTENSION** = ``16``
 
-#### Defined in
+#### 定義於
 
 [core.ts:31](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L31)

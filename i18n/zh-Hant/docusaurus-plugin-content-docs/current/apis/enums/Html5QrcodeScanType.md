@@ -4,24 +4,24 @@ sidebar_position: 2
 
 [html5-qrcode](../) / Html5QrcodeScanType
 
-# Enumeration: Html5QrcodeScanType
+# 列舉：Html5QrcodeScanType
 
-Types of scans supported by the library
+此函式庫支援的掃描類型
 
-## Table of contents
+## 目錄
 
-### Enumeration Members
+### 列舉成員
 
 - [SCAN\_TYPE\_CAMERA](Html5QrcodeScanType.md#scan_type_camera)
 - [SCAN\_TYPE\_FILE](Html5QrcodeScanType.md#scan_type_file)
 
-## Enumeration Members
+## 列舉成員
 
 ### SCAN\_TYPE\_CAMERA
 
 • **SCAN\_TYPE\_CAMERA** = ``0``
 
-#### Defined in
+#### 定義於
 
 [core.ts:77](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L77)
 
@@ -31,6 +31,6 @@ ___
 
 • **SCAN\_TYPE\_FILE** = ``1``
 
-#### Defined in
+#### 定義於
 
 [core.ts:78](https://github.com/mebjas/html5-qrcode/blob/600717e/src/core.ts#L78)
